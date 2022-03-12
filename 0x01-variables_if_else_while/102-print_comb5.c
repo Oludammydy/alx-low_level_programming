@@ -6,7 +6,7 @@
  * The two numbers should be separatedwed by a space.
  * Combinations of numbers should  by a space.
  * All numbers should be printed with two digits. 1 should be printed as 01.
- * Combination of numbers must be separated by a comma follobe printed in ascending order.
+ * Combination of numbers must be separated by a comma
  * `00 01` and `01 00` are considered as the same combination.
  * You can only use `putchar` to print to console.
  * You can only use `putchar` up to 8 times.
