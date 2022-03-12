@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
- umber and check its last digit, compare it with 5
-* main - main block
- * Description: Get a random n * Return: 0
+ * main - main block
+ * Description: Use `putchar` function to print the alphabet in lowercase.
+ * Return: 0
  */
 int main(void)
 {
@@ -14,7 +13,7 @@ int main(void)
 		putchar(c);
 		c++;
 	}
-
 	putchar('\n');
+
 	return (0);
 }
