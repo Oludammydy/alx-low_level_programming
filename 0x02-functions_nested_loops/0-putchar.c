@@ -1,18 +1,22 @@
 #include "main.h"
-/**
-* main - Entry point
-* a new line.
-* Return: Always (Success)
-*/
-int mai write a program tha prints Holberton, followed byn(void)
-{
-	char *ch = "_putchar";
 
-	while (*ch)
-	{
-		_putchar(*ch);
-		ch++;
-	}
+/**
+ * main - prints _putchar
+ *
+ * Return: 0 (Success)
+ */
+
+int main(void)
+{
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
-return (0);
+
+	return (0);
 }
