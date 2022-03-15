@@ -1,10 +1,10 @@
 #include "main.h"
 /**
 * main - Entry point
-* write a program tha prints Holberton, followed by a new line.
+* a new line.
 * Return: Always (Success)
 */
-int main(void)
+int mai write a program tha prints Holberton, followed byn(void)
 {
 	char *ch = "_putchar";
 
