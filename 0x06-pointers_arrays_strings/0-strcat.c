@@ -7,7 +7,9 @@
  * Return: return value of dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, chdest[i] = '\0';
+	return (dest);
+}ar *src)
 {
 	int i;
 	int j;
@@ -27,6 +29,4 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 
-	dest[i] = '\0';
-	return (dest);
-}
+	
