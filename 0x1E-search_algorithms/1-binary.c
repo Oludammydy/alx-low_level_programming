@@ -1,57 +1,61 @@
 #include "search_algos.h"
 
 /**
- * binary_search - binary search implementation
- * @array: string
- * @size: size_t
- * @value: value
- * Return: int, index of the value
+ * recursive_search - searches for a value in an array of
+ * integers using the Binary search algorithm
+ *
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-
-int binary_search(int *array, size_t size, int value)
+int recursive_search(int *array, size_t size, int value)
 {
-size_t i;
-int left = 0;
-int right = size;
-int middle;
-if (array == NULL)
-	return (-1);
+	size_t half = size / 2;
+	size_t i;
 
-for (i = 0; left < right; i++)
-{
-	printf("Searching in array: ");
-	print_array(array, left, right);
-	middle = (left + right) / 2;
+	if (array == NULL || size == 0)
+		return (-1);
 
-	if (array[middle] < value)
-		left = middle + 1;
-	else if (array[middle] > value)
-		right = middle;
-	else
-		return (middle);
+	printf("Searching in array");
+
+	for (i = 0; i < size; i++)
+		printf("%s %d", (i == 0) ? ":" : ",", array[i]);
+
+	printf("\n");
+
+	if (half && size % 2 == 0)
+		half--;
+
+	if (value == array[half])
+		return ((int)half);
+
+	if (value < array[half])
+		return (recursive_search(array, half, value));
+
+	half++;
+
+	return (recursive_search(array + half, size - half, value) + half);
 }
-return (-1);
-}
-
 
 /**
- * print_array - print `n` elements of an array of integers
- * @a: int array pointer to print
- * @i: int, start index
- * @j: int, end index
- * Description: Numbers must be separated by comma and space.
- * Numbers should be displayed in the same order they are stored in array.
- * You can only use _putchar to print.
+ * binary_search - calls to binary_search to return
+ * the index of the number
+ *
+ * @array: input array
+ * @size: size of the array
+ * @value: value to search in
+ * Return: index of the number
  */
-
-void print_array(int *a, int i, int j)
+int binary_search(int *array, size_t size, int value)
 {
+	int index;
 
-	for (; i < j; i++)
-	{
-		printf("%d", a[i]);
-		if (i < j - 1)
-			printf(", ");
-	}
-	printf("\n");
+	index = recursive_search(array, size, value);
+
+	if (index >= 0 && array[index] != value)
+		return (-1);
+
+	return (index);
 }
